@@ -1,0 +1,4 @@
+{
+  "SERVERNAME": "server-1",
+  "CMD": "php /root/script_to_execute.php"
+}
