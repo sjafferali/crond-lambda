@@ -15,8 +15,9 @@ def lambda_handler(event, context):
     host=instances[0]["PrivateIpAddress"]
 
     s3_client = boto3.client('s3')
+
     #Download private key file from secure S3 bucket
-    s3_client.download_file('revmax-key-bucket','keys/sshkey.pem', '/tmp/sshkey.pem')
+    s3_client.download_file(s3bucket,keypath, '/tmp/sshkey.pem')
 
     k = paramiko.RSAKey.from_private_key_file("/tmp/sshkey.pem")
     c = paramiko.SSHClient()
