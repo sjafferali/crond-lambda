@@ -1,8 +1,6 @@
 # crond-lambda
-# 
-# Created and modified using https://aws.amazon.com/blogs/compute/scheduling-ssh-jobs-using-aws-lambda/
-# 
-A simple crond implementation on AWS lambda
+
+A simple crond implementation on AWS lambda. Created and modified using https://aws.amazon.com/blogs/compute/scheduling-ssh-jobs-using-aws-lambda/ 
 
 
 This script gets the private IP of the first matching AWS instance that matches the "SERVERNAME" argument provided. SSH's in and runs the cmd(s) passed to the function. 
